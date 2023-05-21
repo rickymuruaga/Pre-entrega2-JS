@@ -25,4 +25,10 @@ function carrito(){
     return opcion;
 }
 
+function listado(){
+    let producto = prompt("Nuestros productos son")
+    alert(`tenemos \n ${arrayProducto[0].nombre} \n ${arrayProducto[1].nombre} \n ${arrayProducto[2].nombre} \n ${arrayProducto[3].nombre} \n`)
+    for (let i= 0; i < numeros.length; i++){
 
+    }
+}
