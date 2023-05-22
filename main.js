@@ -1,34 +1,49 @@
-class Producto{
+/* class Producto{
     constructor(nombre, precio){
         this.nombre = nombre;
         this.precio = precio;
     }
 }
+ */
+const productos = [
+{  id: 1, nombre: "cemento", precio: 1850}, 
+{  id: 2, nombre: "ceramico", precio: 3000},  
+{  id: 3, nombre: "caños", precio: 800},  
+{  id: 4, nombre: "griferias", precio: 20000},     
 
-const producto1 = new Producto("cemento", 1850);
-const producto2 = new Producto("aridos", 1000);
-const producto3 = new Producto("revestimientos", 4000);
-const producto4 = new Producto("desagues", 800);    
-
-const arrayProducto = [];
-
-arrayProducto.push(producto1);
-arrayProducto.push(producto2);
-arrayProducto.push(producto3);
-arrayProducto.push(producto4);
+];
 
 
+let carrito = []
 
-function carrito(){
-    alert("bienvenido a Brick Construccion");
-    let opcion = parseInt(prompt("Ingrese una opción: \n 1) Ver listado \n 2) Comprar producto \n 3) Salir \n"));
-    return opcion;
+
+
+let elegir = prompt("Desea ver y comprar nuestros productos?")
+
+while(elegir != "si" && elegir != "no"){
+    alert("por favor ingrese si o no")
+    elegir = prompt("Desea comprar?")
 }
 
-function listado(){
-    let producto = prompt("Nuestros productos son")
-    alert(`tenemos \n ${arrayProducto[0].nombre} \n ${arrayProducto[1].nombre} \n ${arrayProducto[2].nombre} \n ${arrayProducto[3].nombre} \n`)
-    for (let i= 0; i < numeros.length; i++){
+if(elegir === "si"){
+    alert("tenemos en stock lo siguiente")
+    let todoslosProductos = productos.map((producto) => producto.nombre + "" + producto.precio + "$")
+    alert(todoslosProductos.join(" - "))
+    
 
-    }
+} else if(elegir === "no"){
+    alert("Te esperamos en otro momento")
 }
+
+    
+
+
+
+
+
+
+
+
+
+
+
